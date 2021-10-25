@@ -1,14 +1,9 @@
 
 import React from "react";
 import { useLocation, Route, Switch, Redirect } from "react-router-dom";
-// reactstrap components
 import { Container, Row, Col } from "reactstrap";
-
-// core components
-import AuthNavbar from "components/Navbars/AuthNavbar.js";
-import AuthFooter from "components/Footers/AuthFooter.js";
-
-import routes from "routes.js";
+import logo from "../assets/img/img/icono.png";
+import routes from "../routes";
 
 const Auth = (props) => {
   const mainContent = React.useRef(null);
@@ -44,23 +39,22 @@ const Auth = (props) => {
 
   return (
     <>
-      <div className="main-content" ref={mainContent}>
-        <AuthNavbar />
+      <div className="main-content" ref={mainContent}>    
         <div className="header bg-gradient-info py-7 py-lg-8">
           <Container>
             <div className="header-body text-center mb-7">
               <Row className="justify-content-center">
                 <Col lg="5" md="6">
-                  <h1 className="text-white">Welcome!</h1>
+                <img src={logo} height="100px" alt=""/>
+                  <h1 className="text-white">InMedicine</h1>
                   <p className="text-lead text-light">
-                    Use these awesome forms to login or create new account in
-                    your project for free.
+                    Su aliado en la gestión de sus procesos en su centro médico
                   </p>
                 </Col>
               </Row>
             </div>
           </Container>
-          <div className="separator separator-bottom separator-skew zindex-100">
+          <div className="separator separator-bottom separator-skew zindex-80">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="none"
@@ -86,7 +80,6 @@ const Auth = (props) => {
           </Row>
         </Container>
       </div>
-      <AuthFooter />
     </>
   );
 };
