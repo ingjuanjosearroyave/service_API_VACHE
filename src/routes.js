@@ -7,6 +7,8 @@ import Login from "../src/views/Login/Login";
 import Tables from "../src/views/examples/Tables.js";
 import Icons from "../src/views/examples/Icons.js";
 import Cita from "../src/views/Cita/cita"
+import Pedido from "../src/views/Pedidos/pedidos";
+import Pacientes from "../src/views/Pacientes/pacientes";
 
 var routes = [
   {
@@ -24,17 +26,17 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/tables",
+    path: "/pacientes",
     name: "Pacientes",
     icon: "ni ni-circle-08 text-red",
-    component: Tables,
+    component: Pacientes,
     layout: "/admin",
   },
   {
-    path: "/tables",
+    path: "/pedidos",
     name: "Pedidos",
     icon: "ni ni-single-copy-04 text-green",
-    component: Tables,
+    component: Pedido,
     layout: "/admin",
   },
   {
